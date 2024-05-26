@@ -11,14 +11,16 @@ if (
     $degistirilecek = $_GET['subdomain'] . "\t" . intval($_GET['ttl']) . "\tIN\t" . $_GET['recordType'];
     if (intval($_GET['aux']) > 0)
         $degistirilecek .= "\t" . intval($_GET['aux']);
-    $degistirilecek .= "\t" . $_GET['data'];
-    $degistirilecek2 = str_replace(".".$domain,"",$degistirilecek);
+    $degistirilecek .= "\t" . $_GET['data'] . "\n";
+    $degistirilecek2 = str_replace("." . $domain, "", $degistirilecek);
+    if ($domain == $_GET['subdomain'])
+        $degistirilecek = str_replace($domain, "@", $degistirilecek);
     $sayi = 0;
     $sayi2 = 0;
     $zone = str_replace($degistirilecek, "", $zone, $sayi);
     $zone = str_replace($degistirilecek2, "", $zone, $sayi2);
     // echo $degistirilecek2;
-    if (($sayi > 0 || $sayi2>0) && file_put_contents($zoneFile, $zone))
+    if (($sayi > 0 || $sayi2 > 0) && file_put_contents($zoneFile, $zone))
         echo "success";
     else
         echo "failed";

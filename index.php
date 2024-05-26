@@ -1,16 +1,16 @@
 <?php
 require "helpers.php";
 $opts = array(
-    'http'=>array(
-      'method'=>"GET",
-      'header'=>"x-api-key: $apikey\r\n"
+    'http' => array(
+        'method' => "GET",
+        'header' => "x-api-key: $apikey\r\n"
     )
-  );
+);
 $context = stream_context_create($opts);
 
 // Open the file using the HTTP headers set above
 $file = file_get_contents("$apiAddress/parseZone.php?types=*", false, $context);
-$response=json_decode($file);
+$response = json_decode($file);
 
 HeaderMenu();
 ?>
@@ -31,53 +31,64 @@ HeaderMenu();
                 <th>data</th>
                 <th style="width: 287px;">İşlemler</th>
             </tr>
-            <?php 
-foreach ($response as $cesit) {
-    foreach ($cesit as $satir) {
-        echo '<tr><td>'.
-        $satir->name.
-        '</td><td>'.
-        $satir->ttl.
-        '</td><td>'.
-        $satir->type.
-        '</td><td>'.
-        $satir->aux.
-        '</td><td>'.
-        $satir->data.
-        '</td><td>'.
-        '<button class="btniconSmall" onclick="location.href=' .
-        "'deleteRecord.php?".
-        "subdomain=$satir->name&".
-        "ttl=$satir->ttl&".
-        "recordType=$satir->type&".
-        "aux=$satir->aux".
-        "&data=$satir->data'\"".
-        " style='background-color:#a61600;'>" .
-        '<i class="fa  fa-x"></i></br> ' .
-        "Sil</button>".
+            <?php
+            foreach ($response as $cesit) {
+                foreach ($cesit as $satir) {
+                    echo '<tr><td>' .
+                        $satir->name .
+                        '</td><td>' .
+                        $satir->ttl .
+                        '</td><td>' .
+                        $satir->type .
+                        '</td><td>' .
+                        $satir->aux .
+                        '</td><td>' .
+                        $satir->data .
+                        '</td><td>' .
+                        '<button class="btniconSmall" onclick="location.href=' .
+                        "'deleteRecord.php?" .
+                        "subdomain=$satir->name&" .
+                        "ttl=$satir->ttl&" .
+                        "recordType=$satir->type&" .
+                        "aux=$satir->aux" .
+                        "&data=" . htmlspecialchars($satir->data) . "'\"" .
+                        " style='background-color:#a61600;'>" .
+                        '<i class="fa  fa-x"></i></br> ' .
+                        "Sil</button>" .
 
-        '<button class="btniconSmall" onclick="location.href=' .
-        "'updateRecord.php?".
-        "subdomain=$satir->name&".
-        "ttl=$satir->ttl&".
-        "recordType=$satir->type&".
-        "aux=$satir->aux".
-        "&data=$satir->data'\"".
-        " style='background-color:#070621;'>" .
-        '<i class="fa  fa-x"></i></br> ' .
-        "Düzenle</button>".
+                        '<button class="btniconSmall" onclick="location.href=' .
+                        "'updateRecord.php?" .
+                        "subdomain=$satir->name&" .
+                        "ttl=$satir->ttl&" .
+                        "recordType=$satir->type&" .
+                        "aux=$satir->aux" .
+                        "&data=" . htmlspecialchars($satir->data) . "'\"" .
+                        " style='background-color:#070621;'>" .
+                        '<i class="fa  fa-x"></i></br> ' .
+                        "Düzenle</button>" .
 
-        '</td></tr>';
-    }
-}
+                        '</td></tr>';
+                }
+            }
             ?>
         </table>
-        <?php echo 
-        '<button class="btniconBottom" onclick="location.href=\'addRecord.php\'"'.
-        " style='background-color:#00a65a;'>" .
-        '<i class="fa  fa-plus"></i></br> ' .
-        "</button>";?>
+        <?php echo
+            '<button class="btniconBottom" onclick="location.href=\'addRecord.php\'"' .
+            " style='background-color:#00a65a;'>" .
+            '<i class="fa  fa-plus"></i></br> ' .
+            "</button>"; ?>
     </div>
 </div>
+<?php if ($_SERVER['QUERY_STRING'] == "success")
+    echo '<div class="fade-in-div" style="background-color: #4BB453;">
+<center>İşlem başarılı!</center>
+</div>'; ?>
+
+<?php if ($_SERVER['QUERY_STRING'] == "fail")
+    echo '<div class="fade-in-div" style="background-color: #cc0000;">
+<center>İşlem sırasında bir hata oluştu!</center>
+</div>'; ?>
+
+
 </div>
 <?php footer(); ?>

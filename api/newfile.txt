@@ -1,0 +1,7 @@
+@	3600	IN	TXT	"google-site-verification=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890"
+
+@	3600	IN	TXT	"google-site-verification=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890"
+
+@	3600	IN	TXT	"google-site-vearification=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890"
+
+@	3600	IN	TXT	"google-site-vearification=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890"

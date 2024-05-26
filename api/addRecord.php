@@ -11,9 +11,9 @@ if (
         $newData = $_GET['subdomain'] . "\t" . intval($_GET['ttl']) . "\tIN\t" . $_GET['recordType'];
         if (intval($_GET['aux']) > 0)
             $newData .= "\t" . intval($_GET['aux']);
-        $newData .= "\t" . $_GET['data'];
+        $newData .= "\t" . $_GET['data'] . "\n";
 
-        if(str_contains($zone,$newData)){
+        if (str_contains($zone, $newData)) {
             echo "failed";
             die();
         }

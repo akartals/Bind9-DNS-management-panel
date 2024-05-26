@@ -1,12 +1,15 @@
 form {
   display: table;
 }
+
 p {
   display: table-row;
 }
+
 label {
   display: table-cell;
 }
+
 input {
   display: table-cell;
 }
@@ -20,6 +23,7 @@ body {
 .container-fluid {
   padding: 0;
 }
+
 .content {
   /* sağ panel içeriği */
   display: flex;
@@ -29,16 +33,22 @@ body {
   text-align: center;
   height: 70vh;
 }
+
 .fas {
-  margin-left: 5px; /* fontawesome iconlar */
+  margin-left: 5px;
+  /* fontawesome iconlar */
   margin-right: 20px;
 }
+
 .fab {
-  margin-left: 5px; /* fontawesome iconlar */
+  margin-left: 5px;
+  /* fontawesome iconlar */
   margin-right: 20px;
 }
+
 .btnicon {
-  margin-left: 5px; /* ikonlu butonlar */
+  margin-left: 5px;
+  /* ikonlu butonlar */
   margin-right: 20px;
   color: white;
   height: 100px;
@@ -46,8 +56,10 @@ body {
   margin-bottom: 10px;
   border-style: none;
 }
+
 .btniconsmall {
-  margin-left: 5px; /* ikonlu butonlar */
+  margin-left: 5px;
+  /* ikonlu butonlar */
   margin-right: 5px;
   color: white;
   height: 80px;
@@ -55,15 +67,17 @@ body {
   margin-bottom: 10px;
   border-style: none;
 }
+
 .btniconbottom {
   color: white;
   height: 50px;
   width: 50px;
-  position:fixed;
-  right:10px;
-  bottom:10px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
   border-style: none;
 }
+
 #tab-list {
   /* sol panel */
   position: fixed;
@@ -73,12 +87,10 @@ body {
   overflow-y: auto;
   border-right: 1px solid #ccc;
   background-color: #663dff;
-  background-image: linear-gradient(
-    45deg,
-    #663dff 0%,
-    #aa00ff 37%,
-    #cc4499 100%
-  );
+  background-image: linear-gradient(45deg,
+      #663dff 0%,
+      #aa00ff 37%,
+      #cc4499 100%);
   z-index: 1000;
   transition: width 0.3s;
   width: 50px;
@@ -94,7 +106,7 @@ body {
   transition: margin-left 0.3s;
 }
 
-#tab-list:hover + .tab-content {
+#tab-list:hover+.tab-content {
   /* yalnızca mouse sol panelin üstündeyken içeriği sağa kaydır */
   margin-left: 200px;
 }
@@ -135,15 +147,14 @@ body {
 .list-group-item::before {
   display: none;
 }
+
 .hizli-islemler {
   width: 100%;
   background-color: #663dff;
-  background-image: linear-gradient(
-    45deg,
-    #663dff 0%,
-    #aa00ff 37%,
-    #cc4499 100%
-  );
+  background-image: linear-gradient(45deg,
+      #663dff 0%,
+      #aa00ff 37%,
+      #cc4499 100%);
 }
 
 table {
@@ -161,4 +172,40 @@ th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+.fade-in-div {
+  position: fixed;
+  animation: fadeIn 5s;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  background-color: #070621;
+  height: 100px;
+  width: 200px;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }

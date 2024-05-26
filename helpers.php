@@ -7,24 +7,24 @@ function HeaderMenu()
     session_start(); ?>
 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <title>DNS yönetim sistemi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <title>DNS yönetim sistemi</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
 
-<body>
-    <div class="container-fluid">
+    <body>
         <div class="container-fluid">
-            <div id="tab-list">
-                <div class="list-group">
+            <div class="container-fluid">
+                <div id="tab-list">
+                    <div class="list-group">
                         <a href="https://github.com/akartals" class="list-group-item list-group-item-action">
                             <span><i class="fab fa-github"></i> Github</span>
                         </a>
@@ -34,17 +34,17 @@ function HeaderMenu()
                         <a href="./index.php" class="list-group-item list-group-item-action">
                             <span><i class="fas fa-home"></i> Ana menü</span>
                         </a>
+                    </div>
                 </div>
-            </div>
-    <?php
+                <?php
 }
 
 function footer()
 {
     ?>
-</div>
-</body>
+            </div>
+    </body>
 
-<?php
+    <?php
 }
 
