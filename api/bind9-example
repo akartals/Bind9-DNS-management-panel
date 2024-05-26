@@ -1,0 +1,78 @@
+$ORIGIN aku.edu.tr.
+aku.edu.tr.       3600  IN  SOA  ns1.aku.edu.tr. admin.aku.edu.tr. (
+                                2024052301 ; serial
+                                3600       ; refresh
+                                1800       ; retry
+                                604800     ; expire
+                                86400      ; ttl
+                            )
+
+; A Records
+@                  3600  IN  A    192.0.2.1
+www                3600  IN  A    192.0.2.2
+blog               3600  IN  A    192.0.2.3
+dev                3600  IN  A    192.0.2.4
+mail               3600  IN  A    192.0.2.5
+ftp                3600  IN  A    192.0.2.6
+subdomain1         3600  IN  A    192.0.2.7
+subdomain2         3600  IN  A    192.0.2.8
+subdomain3         3600  IN  A    192.0.2.9
+subdomain4         3600  IN  A    192.0.2.10
+subdomain5         3600  IN  A    192.0.2.11
+subdomain6         3600  IN  A    192.0.2.12
+subdomain7         3600  IN  A    192.0.2.13
+subdomain8         3600  IN  A    192.0.2.14
+subdomain9         3600  IN  A    192.0.2.15
+subdomain10        3600  IN  A    192.0.2.16
+subdomain11        3600  IN  A    192.0.2.17
+subdomain12        3600  IN  A    192.0.2.18
+subdomain13        3600  IN  A    192.0.2.19
+subdomain14        3600  IN  A    192.0.2.20
+
+; AAAA Records
+ipv6               3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+www-ipv6           3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7335
+mail-ipv6          3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7336
+ftp-ipv6           3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7337
+subdomain1-ipv6    3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7338
+subdomain2-ipv6    3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7339
+subdomain3-ipv6    3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7340
+subdomain4-ipv6    3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7341
+subdomain5-ipv6    3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7342
+subdomain6-ipv6    3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7343
+subdomain7-ipv6    3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7344
+subdomain8-ipv6    3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7345
+subdomain9-ipv6    3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7346
+subdomain10-ipv6   3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7347
+subdomain11-ipv6   3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7348
+subdomain12-ipv6   3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7349
+subdomain13-ipv6   3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7350
+subdomain14-ipv6   3600  IN  AAAA 2001:0db8:85a3:0000:0000:8a2e:0370:7351
+
+; CNAME Records
+www2               3600  IN  CNAME aku.edu.tr.
+subdomain1-cname   3600  IN  CNAME aku.edu.tr.
+subdomain2-cname   3600  IN  CNAME aku.edu.tr.
+subdomain3-cname   3600  IN  CNAME aku.edu.tr.
+subdomain4-cname   3600  IN  CNAME aku.edu.tr.
+subdomain5-cname   3600  IN  CNAME aku.edu.tr.
+subdomain6-cname   3600  IN  CNAME aku.edu.tr.
+subdomain7-cname   3600  IN  CNAME aku.edu.tr.
+subdomain8-cname   3600  IN  CNAME aku.edu.tr.
+subdomain9-cname   3600  IN  CNAME aku.edu.tr.
+subdomain10-cname  3600  IN  CNAME aku.edu.tr.
+subdomain11-cname  3600  IN  CNAME aku.edu.tr.
+subdomain12-cname  3600  IN  CNAME aku.edu.tr.
+subdomain13-cname  3600  IN  CNAME aku.edu.tr.
+subdomain14-cname  3600  IN  CNAME aku.edu.tr.
+
+; MX Records
+@                  3600  IN  MX   10  mail.aku.edu.tr.
+@                  3600  IN  MX   20  alt1.mail.aku.edu.tr.
+@                  3600  IN  MX   30  alt2.mail.aku.edu.tr.
+
+; TXT Records
+@                  3600  IN  TXT  "v=spf1 mx ~all"
+@                  3600  IN  TXT  "google-site-verification=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890"
+
+test	3600	IN	A	test3
